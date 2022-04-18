@@ -1,0 +1,36 @@
+package Encap;
+
+import java.util.Scanner;
+
+public class demo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc=new Scanner(System.in);
+		int i, ch, bal=50000,amount;
+		char ans;
+		do
+		{
+		System.out.println("Enter Choice:\n 1:Deposit \n 2:Withdraw");
+		ch=sc.nextInt();
+		System.out.println("Enter Amount");
+		amount=sc.nextInt();
+		switch(ch)
+		{
+		case 1:
+			bal=bal+amount;
+			break;
+		case 2:
+			bal=bal-amount;
+			break;
+			
+		}
+		System.out.println("Do you want to do the process again");
+		ans=sc.next().charAt(0);
+		}while(ans=='y'|| ans=='Y');
+		System.out.println("Final bal ="+bal);
+		
+	}
+
+}
