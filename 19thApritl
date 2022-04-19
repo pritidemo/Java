@@ -1,0 +1,99 @@
+package Encap;
+
+public class Abstract_demo {
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		
+		Circle obj=new Circle();
+		obj.area();
+		obj.demo();
+		rect obj1=new rect();
+		obj1.area();
+		
+	}
+
+}
+----------------------------------------
+package Encap;
+
+public abstract class shape 
+{
+	abstract double area();
+	public static void demo()
+	{
+		System.out.println("This is normal method");
+	}
+
+}
+
+
+-------------------------
+package Encap;
+
+public class Circle extends shape {
+
+	@Override
+	double area() {
+		// TODO Auto-generated method stub
+		System.out.println("Area of a circle");
+		
+		
+		return 0;
+	}
+
+}
+
+----------
+package Encap;
+
+public class rect extends shape {
+
+	@Override
+	double area() {
+		
+		System.out.println("Area of rectangle :)");
+		return 0;
+	}
+
+}
+
+------------------------
+package Encap;
+
+public interface Choclat 
+{
+	void fun1();
+	void fun2();
+
+}
+
+
+
+---------------------
+package Encap;
+
+public class Inteface_demo implements Choclat {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Inteface_demo obj=new Inteface_demo();
+		obj.fun1();
+		obj.fun2();
+
+	}
+
+	@Override
+	public void fun1() {
+		// TODO Auto-generated method stub
+		System.out.println("This is my function1");
+	}
+
+	@Override
+	public void fun2() {
+		// TODO Auto-generated method stub
+		System.out.println("This is my function2");
+	}
+
+}
